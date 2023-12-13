@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="movil.css" />
+    <script src="https://kit.fontawesome.com/2ee0245f3d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="wow.min.js"></script>
+    <title>Proyecto Final</title>
+
+    <!-- script slide -->
+    <script>
+      $(function () {
+        $("#slider4").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: true,
+          speed: 1000,
+          namespace: "callbacks",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <div class="cabecera" id="cabecera">
+        <figure class="logo">
+          <img src="imagenes/logo.png" alt="" />
+        </figure>
+
+        <div class="icono-menu" id="icono-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Departaments</a></li>
+          <li><a href="">Doctors</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="calendario" id="open">
+        <i id="open" class="fa-solid fa-calendar-days"></i>
+        <p>Appointment</p>
+      </div>
+
+    </header>
+
+    <div class="contenedor-modal" id="contenedor-modal">
+
+      <div class="modal">
+
+        <div class="cerrar " id="close" >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <p>AGENDA TU CITA CON NOSOTROS</p>
+          <form action="/procesar_cita" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+          
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          
+            <label for="fecha">Fecha de la cita:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          
+            <label for="hora">Hora de la cita:</label>
+            <input type="time" id="hora" name="hora" required>
+          
+            <label for="motivo">Motivo de la cita:</label>
+            <textarea id="motivo" name="motivo" rows="4" cols="50" required></textarea>
+          <br>
+            <input id="btn-form" type="submit" value="Agendar Cita">
+          </form>
+        
+      </div>
+    </div>
+
+    <div class="callbacks_container ">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="imagenes/slider1.jpg" alt="" />
+          <p class="caption">There Is No Room For Excuses In Healt</p>
+          <p class="caption2">
+            Get the best healthcare with our competent and experienced staff.
+          </p>
+          <div class="caption-boton">
+            <a href="">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slider2.jpg" alt="" />
+          <p class="caption">
+            For A <br />
+            Healthier Life
+          </p>
+          <p class="caption2">We are at your service for a Healthier life</p>
+          <div class="caption-boton">
+            <a href="">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slider3.jpg" alt="" />
+          <p class="caption">Competent Experienced Physicians</p>
+          <p class="caption2">
+            Your health is in safe hands with our expert and experienced staff.
+          </p>
+          <div class="caption-boton">
+            <a href="">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slider4.jpg" alt="" />
+          <p class="caption">
+            You Not Delay <br />
+            Your Healt
+          </p>
+          <p class="caption2">Your Healt is everything</p>
+          <div class="caption-boton">
+            <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <section class="departamentos">
+      <br />
+      <div class="ancho contenedor-depto">
+        <p class="titulo">Our Departaments</p>
+        <p style="text-align: center; font-weight: 300">
+          We provide you the best service with our strong staff and high
+          technology.
+        </p>
+        <br />
+
+        <article class="contenedor-cards">
+          <div class="cards wow animate__animated animate__backInLeft">
+            <i class="fa-solid fa-syringe"></i>
+            <p>Urology</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInLeft">
+            <i class="fa-solid fa-staff-snake"></i>
+            <p>Gastroenterology</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInRight">
+            <i class="fa-solid fa-lungs"></i>
+            <p>Chest Diseases</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInRight">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <p>Cardiac Surgery</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInLeft">
+            <i class="fa-solid fa-bone"></i>
+            <p>Radiology</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInLeft">
+            <i class="fa-solid fa-tooth"></i>
+            <p>Dental Diseases</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInRight">
+            <i class="fa-solid fa-person-pregnant"></i>
+            <p>Gynecology & Obstetrics</p>
+          </div>
+
+          <div class="cards wow animate__animated animate__backInRight">
+            <i class="fa-solid fa-brain"></i>
+            <p>Brain Surgery</p>
+          </div>
+        </article>
+
+        <br />
+
+        <div class="wow animate__animated animate__fadeInUp">
+          <a class="boton" href="#"
+            >All Departaments <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <br />
+      </div>
+    </section>
+    <br />
+    <section class="seccion3 ancho">
+      <article class="secc3-imgs wow animate__animated animate__rollIn">
+        <figure class="img-rotate">
+          <img src="imagenes/image-rotate.png" alt="" />
+        </figure>
+
+        <figure class="img-paciente">
+          <img src="imagenes/img-paciente.png" alt="" />
+        </figure>
+      </article>
+
+      <article class="secc3-info wow animate__animated animate__fadeInRight">
+        <h2 class="encabezado">New Generation High Technology</h2>
+        <p class="texto-delgado">
+          We provide services in our hospital by moving forward with confidence
+          with constantly renewed technology and future-oriented investments. It
+          receives reports with state-of-the-art devices. We start the treatment
+          by making the correct diagnosis with our specialist physicians.
+        </p>
+
+        <div class="secc3-info2">
+          <i class="fa-solid fa-capsules"></i>
+          <div class="centrar">
+            <p class="encabezado">Safe Treatment</p>
+            <p class="texto-delgado">
+              We treat you safely with our expert staff in the field.
+            </p>
+          </div>
+        </div>
+
+        <div class="secc3-info2">
+            <i class="fa-solid fa-file-waveform"></i>
+          <div class="centrar">
+            <p class="encabezado">Safe Treatment</p>
+            <p class="texto-delgado">
+              We treat you safely with our expert staff in the field.
+            </p>
+          </div>
+        </div>
+
+        <div class="ancho">
+          <a class="boton" href=""
+            >Get to know us <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </article>
+    </section>
+
+<br><br>
+
+    <section class="seccion4 ">
+      <article class="tarjeta-caract wow animate__animated animate__fadeIn">
+        <p class="titulo2">Wellnes Center</p>
+        <div class="icono">
+          <i class="fa-solid fa-hospital"></i>
+        </div>
+          <p class="texto-delgado">In our wellness center, we strive to be your most reliable guide in your health journey with personalized supportive treatment packages.</p>
+      </article>
+
+      <article class="tarjeta-caract wow animate__animated animate__fadeIn">
+        <p class="titulo2">Online Interview</p>
+        <div class="icono">
+          <i class="fa-solid fa-house-laptop"></i>
+        </div>
+          <p class="texto-delgado">In our wellness center, we strive to be your most reliable guide in your health journey with personalized supportive treatment packages.</p>
+      </article>
+
+      <article class="tarjeta-caract wow animate__animated animate__fadeIn">
+        <p class="titulo2">Operations</p>
+        <div class="icono">
+          <i class="fa-solid fa-bed-pulse"></i>
+        </div>
+          <p class="texto-delgado">In our wellness center, we strive to be your most reliable guide in your health journey with personalized supportive treatment packages.</p>
+      </article>
+
+      <article class="tarjeta-caract wow animate__animated animate__fadeIn">
+        <p class="titulo2">Safe Hospital</p>
+        <div class="icono">
+          <i class="fa-solid fa-house-medical-circle-check"></i>
+        </div>
+          <p class="texto-delgado">In our wellness center, we strive to be your most reliable guide in your health journey with personalized supportive treatment packages.</p>
+      </article>
+    </section>
+    <br><br>
+
+    <section class="seccion-team ancho" id="carousel">
+        <p class="titulo">Our Expert Doctors</p>
+        <p style="text-align: center; ">Your health is entrusted to us.</p>
+
+        <article class="contenedor-team" id="slide-container">
+
+          <div class="tarjeta-doct slide" data-slideIndex="0">
+            <figure class="doctor">
+              <img src="imagenes/team1.png" alt="">
+            </figure>
+            <div class="info-doc">
+              <p>Jack Smith</p>
+              <p>Urology Doctor</p>
+              <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta-doct slide" data-slideIndex="1">
+            <figure class="doctor">
+              <img src="imagenes/team2.png" alt="">
+            </figure>
+            <div class="info-doc">
+              <p>Adam Brown</p>
+              <p>Gastroenterology Doctor</p>
+              <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta-doct slide" data-slideIndex="2">
+            <figure class="doctor">
+              <img src="imagenes/team3.png" alt="">
+            </figure>
+            <div class="info-doc">
+              <p>Michael Lee</p>
+              <p>Chest Diseases Doctor</p>
+              <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta-doct slide" data-slideIndex="3">
+            <figure class="doctor">
+              <img src="imagenes/team4.png" alt="">
+            </figure>
+            <div class="info-doc">
+              <p>Olivia Lee</p>
+              <p>Dental Doctor</p>
+              <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+    </section>
+
+        <div class="slide-buttons">
+        </div>
+        <div id="back-button" >
+        </div>
+        <div id="forward-button">
+        </div>
+
+        <div class="slide-indicators">
+          <div class="slide-indicator active"></div>
+          <div class="slide-indicator"></div>
+          <div class="slide-indicator"></div>
+          <div class="slide-indicator"></div>
+        </div>
+
+        <section class="ancho ">
+          <p class="titulo">Resent New & Articles</p>
+          <article class="contenedor">
+
+            <div class="contenedor-acordeon">
+                <div class="acordeon">
+                    <div class="acordeon-titulo">
+                    <i class=" icono-abajo fa-solid fa-circle-arrow-down"></i>
+                    <i class=" icono-arriba fa-solid fa-circle-arrow-up"></i>
+                    <p>Stress threatens oral and dental health!</p>
+                  </div>
+                  
+                  <div class="contenido">
+                    <figure>
+                      <img src="imagenes/paciente1.png" alt="">
+                    </figure>
+                    <p>Stress, one of the most important diseases of our age, brings many diseases such as headache, heart disease, obesity, nausea.</p>
+                  </div>
+                </div>
+                <div class="acordeon">
+                  <div class="acordeon-titulo">
+                    <i class=" icono-abajo fa-solid fa-circle-arrow-down"></i>
+                    <i class=" icono-arriba fa-solid fa-circle-arrow-up"></i>
+                    <p>Unknowns in Implant Treatment</p>
+                  </div>
+                  
+                  <div class="contenido">
+                    <figure>
+                      <img src="imagenes/paciente2.png" alt="">
+                    </figure>
+                    <p>An implant is an artificial titanium tooth root placed in the jawbone in the treatment of missing teeth. Beforehand, panoramic.</p>
+                  </div>
+                </div>
+                <div class="acordeon">
+                  <div class="acordeon-titulo">
+                    <i class=" icono-abajo fa-solid fa-circle-arrow-down"></i>
+                    <i class=" icono-arriba fa-solid fa-circle-arrow-up"></i>
+                    <p>Amazing Methods for Toothache</p>
+                  </div>
+
+                  <div class="contenido">
+                    <figure>
+                      <img src="imagenes/paciente3.png" alt="">
+                    </figure>
+                    <p>Amazing Methods for Toothache There is hardly a person who has never had a toothache in his life. No matter</p>
+                  </div>
+                </div>
+                <div class="acordeon">
+                  <div class="acordeon-titulo">
+                    <i class=" icono-abajo fa-solid fa-circle-arrow-down"></i>
+                    <i class=" icono-arriba fa-solid fa-circle-arrow-up"></i>
+                    <p>It’s Now Easy to Have Perfect Smiles</p>
+                  </div>
+
+                  <div class="contenido">
+                    <figure>
+                      <img src="imagenes/paciente4.png" alt="">
+                    </figure>
+                    <p>What are the consequences of dental crowding in terms of general health? How is the treatment done? Tooth crowding can</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="mapa">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/96bg_wGDzEs?si=YMZzzZUWRAQOGPHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
+        </article>
+
+        </section>
+        <br><br>
+
+        <div class="regresar">
+          <a href=""><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <footer>
+
+          <section class="pie">
+            <article class="contactos">
+
+              <figure>
+                <img src="imagenes/logo-footer-medidoc.png" alt="">
+              </figure>
+              <div>
+                <i class="fa-solid fa-map-location-dot"></i>
+                <p>Merida Yucatán, MEX </p>
+              </div>
+              <div>
+                <i class="fa-solid fa-headset"></i>
+                <p>(+52) 999-219-2446</p>
+              </div>
+              <div class="redes2">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+
+            </article>
+
+            <article class="subscribe">
+              <p class="titulo3">Join Our Newsletter</p>
+              <p>Subscribe to our e-newsletter to be informed about important health information</p>
+
+              <div class="botones">
+                
+                <div class="boton-blanco">
+                  <input placeholder="  Your Email Address" type="text">
+                </div>
+
+                <div class="boton-blanco">
+                  <a href="">Subscribe</a>
+                </div>
+              </div>
+
+            </article>
+
+            <article class="lista">
+              <p class="titulo3">Departaments</p>
+              <br>
+              <ul>
+                <li>Urology</li>
+                <li>Gastroenterology</li>
+                <li>Chest Diseases</li>
+                <li>Cardiac Surgery</li>
+                <li>Dental Diseases</li>
+                <li>Gynecology</li>
+                <li>Brain Surgery</li>   
+              </ul>
+            </article>
+
+            <article class="lista">
+              <p class="titulo3">Quick Liks</p>
+              <br>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Blog</li>
+                <li>Doctors</li> 
+                <li>All Departments</li>
+                <li>Contact</li>
+                <li>Appointment</li>
+              </ul>
+            </article>
+
+          </section>
+          <br>
+        <div style="text-align: center;">
+          <p>© 2023 Antonio Farfán -  All Rights Reserve</p>
+        </div>
+        </footer>
+
+        <script>
+        var fondo = document.getElementById("contenedor-modal");
+        
+        $("#open").click(function () {
+        fondo.style.display = "flex";
+        });
+
+        $("#close").click(function () {
+          fondo.style.display = "none";
+        });
+
+        window.onclick = function (event) {
+          if (event.target == fondo) {
+            fondo.style.display = "none";
+          }
+        };
+        </script>
+             
+    <script src="carrousel.js"></script>
+    <script>
+        // SCRIPT WOW
+        new WOW().init();
+
+        // menu responsive
+        $("#icono-menu").click(function () {
+        $("#menu").slideToggle();
+      });
+
+      // SCRIPT ACORDEON
+        $(document).ready(function () {
+            $('.acordeon-titulo').click(function () {
+                var icon = $(this).find('.icon');
+                var content = $(this).next('.contenido');
+
+                content.slideToggle('fast', function () {
+                    $(this).prev('.acordeon-titulo').toggleClass('active', $(this).is(':visible'));
+                });
+
+                $('.acordeon-titulo').not(this).removeClass('active')
+                    .find('.icon').text('+')
+                    .end().next('.contenido').slideUp('fast');
+            });
+        });
+
+    </script>
+  </body>
+</html>

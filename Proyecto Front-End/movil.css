@@ -1,0 +1,185 @@
+@import "style.css";
+/* MEDIAQUERY CAROUSEL */
+@media screen and (max-width: 768px) {
+  .slide {
+    padding: 15px;
+    min-width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slide {
+    padding: 10px;
+    min-width: 100%;
+  }
+}
+/* FIN */
+
+@media screen and (max-width: 430px) {
+  header {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  nav {
+    /* border: 1px #333 solid; */
+    display: none;
+    width: 100%;
+  }
+  nav ul {
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    /* border: 1px blue solid; */
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--poppins);
+  }
+  nav ul li a {
+    /* border: 1px green solid; */
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px;
+  }
+  .icono-menu {
+    display: flex;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  .cabecera {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .calendario p {
+    display: none;
+  }
+  .calendario i {
+    font-size: 15px;
+  }
+
+  .callbacks_nav {
+    display: none;
+  }
+
+  .caption {
+    width: 85%;
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .caption2 {
+    width: 95%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px #333;
+    color: #fff;
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%, -50%);
+    font-family: var(--poppins);
+    font-weight: 500;
+  }
+
+  .caption-boton {
+    font-size: 14px;
+    left: 50%;
+    top: 75%;
+    padding: 15px 20px;
+  }
+
+  .contenedor-cards {
+    justify-content: center;
+  }
+
+  .cards {
+    width: 90%;
+  }
+
+  .seccion3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .secc3-imgs {
+    width: 80%;
+  }
+  .secc3-info {
+    width: 80%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px;
+  }
+  .secc3-info2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .centrar {
+    text-align: center;
+  }
+
+  .seccion4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tarjeta-caract{
+    width: 85%;
+    box-shadow: 0px 0px 10px 0px #9c9c9c;
+  }
+  .contenedor{
+    flex-direction: column;
+  }
+  .contenedor-acordeon{
+    width: 100%;
+  }
+  .mapa{
+    width: 90%;
+  }
+  .mapa iframe{
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+  }
+  .pie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contactos{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: var(--poppins);
+    font-weight: 200;
+  }
+  .lista{
+    width:90%;
+    padding-left: 50px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .lista ul li{
+    list-style: none;
+  }
+  .subscribe{
+    width: 90%;
+    padding: 20px 0px;
+  }
+}
